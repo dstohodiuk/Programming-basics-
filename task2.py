@@ -10,12 +10,37 @@ print(first_list)
 type_list = [type(year), type(word), type(it), type(logical_type), type(key)]
 print(type_list)
 
-if type_list != str:
-    print('Найчастіший тип: ', type(word))
+int_type = 0
+str_type = 0
+bool_type = 0
+dict_type = 0
 
-elif type_list != int:
-    print('Найчастіший тип: ', type(year))
+for check in type_list:
 
-else:
-    type_list != str
-    print("Exit")
+    if check == int:
+        int_type += 1
+
+    elif check == str:
+        str_type += 1
+
+    elif check == bool:
+        bool_type += 1
+
+    elif check == dict:
+        dict_type += 1
+
+greatest_value = max(int_type, str_type, bool_type, dict_type)
+
+if greatest_value == int_type:
+    result = 'int'
+
+elif greatest_value == str_type:
+    result = 'str'
+
+elif greatest_value == bool_type:
+    result = 'bool'
+
+elif greatest_value == dict_type:
+    result = 'dict'
+
+print("Найчастіший тип: ", result)
