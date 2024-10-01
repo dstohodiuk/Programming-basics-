@@ -1,21 +1,23 @@
-first_dict = {"first key": "TFC LNTU",
-              "Second key": 17,
-              "Trird key": {"First key": 21,
-                            "Second key": 'Denys',
-                            "Trird key": True,
-                            "Fourh key": False,
-                            "Fifth key": (1, 2, 3, 4, 5)},
-              "Fourh key": "Stohodiuk"}
+first = {"first key": "TFC LNTU",
+         "Second key": 17,
+         "Trird key": {"One": 21,
+                       "Two": 'Denys',
+                       "three": True,
+                       "four": False,
+                       "five": (1, 2, 3, 4, 5)},
+         "Fourh key": "Stohodiuk"}
 
-print(first_dict)
+print(first)
 
-second_dict = {"first key": type("TFC LNTU"),
-               "Second key": type(17),
-               "Trird key": {"First key": type(21),
-                             "Second key": type('Denys'),
-                             "Trird key": type(True),
-                             "Fourh key": type(False),
-                             "Fifth key": type((1, 2, 3, 4, 5))},
-               "Fourh key": type("Stohodiuk")}
+second_dict = {}
+
+for keys, checks in first.items():
+    if type(checks) == dict:
+
+        for keys1, checks1 in checks.items():
+            second_dict[keys1] = type(checks1)
+
+    else:
+        second_dict[keys] = type(checks)
 
 print(second_dict)
