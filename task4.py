@@ -1,11 +1,10 @@
 # [3,1,2,3,4,5,6,3,4,5,7,6,5,4,3,4,5,4,3, 'Привіт', 'анаконда']
 def dublicate(dubli_list):
     num = []
-
+    
     for check in dubli_list:
         if check not in num:
             num.append(check)
-
     return num
 
 
