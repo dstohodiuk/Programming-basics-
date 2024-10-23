@@ -8,5 +8,4 @@ def repear_all_messages(messages):
     bot.send_message(messages.chat.id, messages.text)
 
 
-if __name__ == '__main__':
-    bot.infinity_polling()
+bot.infinity_polling()
