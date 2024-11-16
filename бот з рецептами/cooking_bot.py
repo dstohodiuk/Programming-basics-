@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup as bs
 
 url = 'https://www.unian.ua/recipes'
 
-bot = telebot.TeleBot('7791255523:AAFjk1Gkjfc7eneRA3tjS9gFOnBJNBnbhzw')
+bot = telebot.TeleBot('TOKEN')
 
 categories = {
     'Святкові меню': 'https://www.unian.ua/recipes/holiday-menus',
