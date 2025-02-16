@@ -7,7 +7,7 @@ class Denys:
     def calculates_the_course(self, year: int):
         if self.birth_year == None:
             return None
-        my_course = year - (self.birth_year + 15)
+        my_course = year - (self.birth_year + 16)
         return my_course
 
     def set_name(self):
