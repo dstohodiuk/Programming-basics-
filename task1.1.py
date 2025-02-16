@@ -4,17 +4,18 @@ class Denys:
         self.last_name = last_name
         self.birth_year = birth_year
 
-    def calculates_the_course(birth_year: int):
-        my_year = 2007
-        rate = 1.0 + (birth_year - my_year) * 0.05
-        return max(rate, 0.1)
-
-    print(f"Your course: {calculates_the_course(2003):.2}")
+    def calculates_the_course(self, year: int):
+        if self.birth_year == None:
+            return None
+        my_course = year - (self.birth_year + 15)
+        return my_course
 
     def set_name(self):
         return [self.name, self.last_name]
 
 
-name_last_name = Denys('Denys', 'Stohodiuk',)
+name_last_name = Denys('Denys', 'Stohodiuk', 2007)
 list_name = name_last_name.set_name()
+my_course = name_last_name.calculates_the_course(2025)
+print(f'По розрахункам, ви навчаєтесь приблизно на курсі {my_course}')
 print(list_name)
